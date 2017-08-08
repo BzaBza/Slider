@@ -1,0 +1,26 @@
+.slider{
+    width: 500px;
+}
+.mainImage{
+    width: 400px;
+    border:2px solid black;
+    text-align: center;
+}
+.mainImage img{
+    width: 400px;
+    text-align: center;
+}
+.bottomImages img{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.bottomImages li{
+    border: 1px solid black;
+    list-style-type: none;
+    display: inline-block;
+}
+.controlPanel{
+    position: absolute;
+    margin: -300px 0px 100px 1400px;
+}
