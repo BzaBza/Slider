@@ -20,11 +20,19 @@ document.querySelector('.addImg').onclick = function addImg() {
     imgArr.length = 0;
 };
 //**delete image
-document.querySelector('.deleteImg').onclick = function deleteImg() {
-        let BySideImages = document.querySelectorAll('li');
-        BySideImages.;
-
+document.querySelector('.deleteImg').onclick = function redBorder() {
+    let BySideImages = document.querySelectorAll('li');
+    for (let i = 0; i < BySideImages.length; i++) {
+        BySideImages[i].style.borderColor = 'red';
+    }
+    let pictures = document.querySelectorAll('li');
+    for (let i = 0; i < pictures.length; i++) {
+        pictures[i].onclick = function () {
+            this.parentNode.removeChild(this);
+        }
+    }
 };
+
 
 //**slide image
 document.querySelector('#left').onclick = function previousImg() {
