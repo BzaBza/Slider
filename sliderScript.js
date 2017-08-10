@@ -19,7 +19,7 @@ document.querySelector('.addImg').onclick = function addImg() {
     }
     imgArr.length = 0;
 };
-//**delete image
+// **delete image
 document.querySelector('.deleteImg').onclick = function redBorder() {
     let BySideImages = document.querySelectorAll('li');
     for (let i = 0; i < BySideImages.length; i++) {
@@ -32,6 +32,16 @@ document.querySelector('.deleteImg').onclick = function redBorder() {
         }
     }
 };
+let mainBlock = document.querySelector('.mainImg');
+let mainImage = document.querySelector('.mainImg img');
+let pictures = document.querySelectorAll('li img');
+for (let i = 0; i < pictures.length; i++) {
+    pictures[i].onclick = function () {
+        let img = document.querySelector('img');
+        mainBlock.removeChild(mainImage);
+        mainBlock.appendChild(this.cloneNode(true));
+    }
+}
 
 
 //**slide image

@@ -1,12 +1,12 @@
 .slider{
     width: 500px;
 }
-.mainImage{
+.mainImg{
     width: 400px;
     border:2px solid black;
     text-align: center;
 }
-.mainImage img{
+.mainImg img{
     width: 400px;
     text-align: center;
 }
