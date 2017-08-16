@@ -31,18 +31,20 @@ document.querySelector('.deleteImg').onclick = function redBorder() {
             this.parentNode.removeChild(this);
         }
     }
+
 };
-let mainBlock = document.querySelector('.mainImg');
-let mainImage = document.querySelector('.mainImg img');
-let pictures = document.querySelectorAll('li img');
-for (let i = 0; i < pictures.length; i++) {
-    pictures[i].onclick = function () {
-        let img = document.querySelector('img');
-        mainBlock.removeChild(mainImage);
-        mainBlock.appendChild(this.cloneNode(true));
+
+let imgBlock = document.querySelector('.img-block');
+let images = document.querySelectorAll('li img');
+imgBlock.appendChild(images[0].cloneNode(true));
+for (let i = 0; images.length; i++) {
+    images[i].onclick = function () {
+        while (imgBlock.hasChildNodes()) {
+            imgBlock.removeChild(imgBlock.lastChild);
+        }
+        imgBlock.appendChild(images[i].cloneNode(true));
     }
 }
-
 
 //**slide image
 document.querySelector('#left').onclick = function previousImg() {
